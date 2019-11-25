@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title></title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    
+</head>
+
+<script rel="stylesheet">
+    $(document).ready(function () {
+        $('#select2Competences').select2();
+        $('#select2Competences1').select2();
+        $('.js-example-basic-multiple').select2();
+    });
+</script>
+
+<body id="page-top" style="background-color: #4e73df;">
+    <div class="card text-center" style="margin: auto; text-align: center; margin-top: 30px; width: 800px;">
+        <div class="card-header" style="font-size: 50px;">
+            <i class="far fa-file-alt"></i>
+            Cv en ligne
+            <i class="far fa-file-alt"></i>
+        </div>
+        <div class="card-body">
+            <div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Adresse Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Prénom</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Prénom">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Date de naissance</label>
+                            <input type="date" name="bday" max="3000-12-31" min="1000-01-01" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPost1">Liste compétences techniques</label><br>
+                            <select id="select2Competences" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;">
+                                <option value="AL">JavaScript</option>
+                                <option value="WY">CakePhp</option>
+                                <option value="WY">Bootstrap4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Nom</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPost1">Poste</label>
+                            <input type="post" class="form-control" id="exampleInputPost1" placeholder="Poste">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPost1">Téléphone</label>
+                            <input type="post" class="form-control" id="exampleInputPost1" placeholder="Télephone">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPost1">Liste compétences méthologique</label><br>
+                            <select id="select2Competences1" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;">
+                                <option value="AL">Kanban</option>
+                                <option value="WY">Jira</option>
+                                <option value="WY">Scrum</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Valider votre fiche de compétences</button>
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            Talent Of Tomorrow
+        </div>
+    </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+</body>
+
+</html>
