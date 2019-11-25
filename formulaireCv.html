@@ -30,6 +30,19 @@
         $('#select2Competences').select2();
         $('#select2Competences1').select2();
         $('.js-example-basic-multiple').select2();
+
+        const competencesTech = ['Javascript', 'Symfony', 'php', 'TypeScript', 'perl', 'Angular', 'NgRx', 'RxJs', 'Python', 'C#', 'AngularJS', 'Bootstrap4', 'CakePHP'];
+
+        const competencesMeth = ['Kanban', 'Scrum', 'Jira', 'Git', 'Jenkins', 'Docker', 'Kubernetes'];
+
+        const competencesHumaine = ['Curieux', 'Accessible', 'Agréable', 'Altruiste', 'Ambitieux', 'Dynamique', 'Honnête', 'Autonome', 'Combatif', 'Coopératif', 'Persévérant', 'Précis', 'minutieux'];
+
+        competencesTech.forEach(element => $('#select2Competences').append('<option value="AL">'+element+'</option>'));
+
+        competencesMeth.forEach(element => $('#select2CompetencesMethodo').append('<option value="AL">' + element + '</option>'));
+
+        competencesHumaine.forEach(element => $('#select2CompetencesHumaine').append('<option value="AL">' + element + '</option>'));
+
     });
 </script>
 
@@ -61,12 +74,8 @@
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPost1">Liste compétences techniques</label><br>
-                            <select id="select2Competences" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;">
-                                <option value="AL">JavaScript</option>
-                                <option value="WY">CakePhp</option>
-                                <option value="WY">Bootstrap4</option>
-                            </select>
+                            <label>Compétences techniques</label><br>
+                            <select id="select2Competences" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;"></select>
                         </div>
                     </div>
                     <div class="col">
@@ -87,14 +96,14 @@
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPost1">Liste compétences méthologique</label><br>
-                            <select id="select2Competences1" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;">
-                                <option value="AL">Kanban</option>
-                                <option value="WY">Jira</option>
-                                <option value="WY">Scrum</option>
-                            </select>
+                            <label for="exampleInputPost1">Compétences méthologiques</label><br>
+                            <select id="select2CompetencesMethodo" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;"></select>
                         </div>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPost1">Qualités humaines</label><br>
+                    <select id="select2CompetencesHumaine" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;"></select>
                 </div>
                 <button type="submit" class="btn btn-primary">Valider votre fiche de compétences</button>
             </div>

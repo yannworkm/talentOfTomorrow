@@ -27,6 +27,14 @@
 
   <body id="page-top" style="background: url('https://wallpapercave.com/wp/wp2912415.jpg') fixed center"
 >
+    <script>  
+    $(document).ready(function () {
+        console.log("ready!");
+        function hideUploadFileCv(){
+          if ($('#inlineRadio1').prop("checked")) { alert("checked!"); }
+        }
+      });
+    </script>
     <div class="card text-center" style="margin: auto; text-align: center; margin-top: 30px; width: 500px;">
         <div class="card-header" style="font-size: 50px;">
           <i class="fas fa-file-upload"></i>
@@ -35,39 +43,43 @@
         <div class="card-body">
         <form>
             <div class="form-group">
-                <label for="exampleInputEmail1">Adresse Email</label>
+                <label for="exampleInputEmail1"> <i class="fas fa-envelope"></i> Adresse Email </label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     placeholder="Email">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Prénom</label>
+                <label for="exampleInputEmail1"> <i class="fas fa-male"></i> Prénom</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     placeholder="Prénom">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Nom</label>
+                <label for="exampleInputPassword1"> <i class="fas fa-male"></i> Nom</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nom">
             </div>
             <div class="form-group">
-                <label for="exampleInputPost1">Poste</label>
+                <label for="exampleInputPost1"> <i class="fas fa-briefcase"></i> Poste</label>
                 <input type="post" class="form-control" id="exampleInputPost1" placeholder="Poste">
             </div>
             <div class="form-group">
-              <label for="exampleFormControlFile1">Sélectionner votre choix</label><br>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
+              <div class="row">
+                <div class="col">
+                  <a href="formulaireCv.html" class="btn btn-outline-secondary" role="button" aria-pressed="true">Créer son cv</a>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Charger son cv
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="form-group">
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
                 <label for="exampleFormControlFile1">Charger votre cv</label>
                 <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary" onClick="submitCV()"><i class="fas fa-check"></i> Valider</button>
+            <button type="submit" class="btn btn-outline-primary" onClick="submitCV()"><i class="fas fa-check"></i> Valider</button>
         </form>
         </div>
         <div class="card-footer text-muted">
