@@ -31,10 +31,19 @@
         $('#select2Competences1').select2();
         $('.js-example-basic-multiple').select2();
 
-        competencesTech.forEach(element => $('#select2Competences').append('<option value="AL">'+element+'</option>'));
-        competencesMeth.forEach(element => $('#select2CompetencesMethodo').append('<option value="AL">' + element + '</option>'));
-        competencesHumaine.forEach(element => $('#select2CompetencesHumaine').append('<option value="AL">' + element + '</option>'));
+        competencesTech.forEach(element => $('#select2Competences').append('<option value="'+ element+'">'+element+'</option>'));
+        competencesMeth.forEach(element => $('#select2CompetencesMethodo').append('<option value="'+ element+'">' + element + '</option>'));
+        competencesHumaine.forEach(element => $('#select2CompetencesHumaine').append('<option value="'+ element+'">' + element + '</option>'));
+        
     });
+
+     function valideForm() {
+            var compTech = $('#select2Competences').val().split(',');
+            var comptMethodo = $('#select2CompetencesMethodo').val().split(',');
+            var comptHumaine = $('#select2CompetencesHumaine').val().split(',');
+
+            alert(compTech, comptHumaine, comptMethodo);
+        }
 </script>
 
 <body id="page-top"     style="background: url('https://wallpapercave.com/wp/wp2912415.jpg') fixed center">
@@ -96,7 +105,7 @@
                     <label for="exampleInputPost1">Qualités humaines</label><br>
                     <select id="select2CompetencesHumaine" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;"></select>
                 </div>
-                <button type="submit" class="btn btn-primary">Valider votre fiche de compétences <i class="fas fa-check-double"></i></button>
+                <button type="submit" class="btn btn-primary" onclick="valideForm();">Valider votre fiche de compétences <i class="fas fa-check-double"></i></button>
             </div>
         </div>
         <div class="card-footer text-muted">
