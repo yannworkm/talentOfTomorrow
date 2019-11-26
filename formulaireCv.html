@@ -42,8 +42,8 @@
             var comptMethodo = $('#select2CompetencesMethodo').val().toString().split(',');
             var comptHumaine = $('#select2CompetencesHumaine').val().toString().split(',');
 
-            getMatchingPoste(compTech, comptMethodo, comptHumaine)
-
+            var resultGlobalMatchingPost = getMatchingPoste(compTech, comptMethodo, comptHumaine)
+            console.log(resultGlobalMatchingPost);
         }
 </script>
 
