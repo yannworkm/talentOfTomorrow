@@ -1,6 +1,7 @@
 var boulanger = {
   "Poste" : "Boulanger",
   "Entreprise": "Boulangerie Marie Blachère",
+  "Catégorie" : "Agroalimentaire" ,
   "Compétences" : {
     "Technique" : {
       "1" : "Pâte" ,
@@ -25,7 +26,8 @@ var boulanger = {
 
 var iT_Infra = {
   "Poste" : "Architecte infrastructure IT",
-  "Entreprise": "",
+  "Entreprise": "ST",
+  "Catégorie" : "Informatique" ,
   "Compétences" : {
     "Technique" : {
       "1" : "Windows" ,
@@ -54,6 +56,7 @@ var iT_Infra = {
 var iT_Dev = {
   "Poste" : "Ingénieur logiciel",
   "Entreprise": "TRIXELL",
+  "Catégorie" : "Informatique" ,
   "Compétences" : {
     "Technique" : {
       "1" : "Java" ,
@@ -80,6 +83,7 @@ var iT_Dev = {
 var commercial = {
   "Poste" : "Commercial",
   "Entreprise": "Carrefour",
+  "Catégorie" : "Vente" ,
   "Compétences" : {
     "Technique" : {
       "1" : "Négociations" ,
@@ -106,6 +110,7 @@ var commercial = {
 var secrétaire = {
   "Poste" : "Secrétaire",
   "Entreprise": "IBM",
+  "Catégorie" : "Secrétariat" ,
   "Compétences" : {
     "Technique" : {
       "1" : "Accueil physique" ,
@@ -132,6 +137,35 @@ var secrétaire = {
 var listPost = new Array (boulanger, iT_Infra, iT_Dev, commercial, secrétaire);
 
 
+
+function getMatchingPoste(compTech, comptMethodo, comptHumaine)
+{
+  var resultGlobalMatching = [];
+  listPost.forEach(function(poste){
+    var actualPoste = poste['Poste'];
+    var matchingcompTech = getMatchingComp(Object.values(poste['Compétences']['Technique']),compTech);
+    var matchingcompMethodo = getMatchingComp(Object.values(poste['Compétences']['Methodologique']),comptMethodo);
+    var matchingcompHumaine = getMatchingComp(Object.values(poste['Compétences']['Humaine']),comptHumaine);
+    var globalmatching = Math.round(((matchingcompTech+matchingcompMethodo+matchingcompHumaine)/3)*100)/100;
+    resultGlobalMatching.push(
+      {
+        "Poste" : actualPoste,
+        "Résultat" : globalmatching+"%"
+      }
+    );
+  });
+  console.log(resultGlobalMatching);
+}
+
+function getMatchingComp(listPost, listCandidat) {
+    var matches = [];
+    for ( var i = 0; i < listPost.length; i++ ) {
+        for ( var e = 0; e < listCandidat.length; e++ ) {
+            if ( listPost[i] === listCandidat[e] ) matches.push( listPost[i] );
+        }
+    }
+    return Math.round((matches.length/listPost.length)*10000)/100;
+}
 
 const competencesTech = [
   "Javascript",
@@ -166,6 +200,43 @@ const competencesMeth = [
 ];
 
 const competencesHumaine = [
+  "Curieux",
+  "Accessible",
+  "Agréable",
+  "Altruiste",
+  "Ambitieux",
+  "Dynamique",
+  "Honnête",
+  "Autonome",
+  "Combatif",
+  "Coopératif",
+  "Persévérant",
+  "Précis",
+  "minutieux",
+  "Rigoureux",
+  "Observateur",
+  "Bienveillant",
+  "Loyale",
+  "généreux",
+  "perfectionniste",
+  "créatif",
+  "calme",
+  "patient",
+  "ponctuel",
+  "pragmatique",
+  "volontaire",
+  "vigilant",
+  "vif",
+  "sincère",
+  "sociable",
+  "vaillant",
+  "prudent",
+  "pugnace",
+  "paisible",
+  "optimiste"
+];
+
+const category = [
   "Curieux",
   "Accessible",
   "Agréable",

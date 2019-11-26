@@ -34,15 +34,16 @@
         competencesTech.forEach(element => $('#select2Competences').append('<option value="'+ element+'">'+element+'</option>'));
         competencesMeth.forEach(element => $('#select2CompetencesMethodo').append('<option value="'+ element+'">' + element + '</option>'));
         competencesHumaine.forEach(element => $('#select2CompetencesHumaine').append('<option value="'+ element+'">' + element + '</option>'));
-        
+
     });
 
      function valideForm() {
-            var compTech = $('#select2Competences').val().split(',');
-            var comptMethodo = $('#select2CompetencesMethodo').val().split(',');
-            var comptHumaine = $('#select2CompetencesHumaine').val().split(',');
+            var compTech = $('#select2Competences').val().toString().split(',');
+            var comptMethodo = $('#select2CompetencesMethodo').val().toString().split(',');
+            var comptHumaine = $('#select2CompetencesHumaine').val().toString().split(',');
 
-            alert(compTech, comptHumaine, comptMethodo);
+            getMatchingPoste(compTech, comptMethodo, comptHumaine)
+
         }
 </script>
 
