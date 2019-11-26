@@ -37,14 +37,14 @@
 
     });
 
-     function valideForm() {
-            var compTech = $('#select2Competences').val().toString().split(',');
-            var comptMethodo = $('#select2CompetencesMethodo').val().toString().split(',');
-            var comptHumaine = $('#select2CompetencesHumaine').val().toString().split(',');
+        function valideForm() {
+               var compTech = $('#select2Competences').val().toString().split(',');
+               var comptMethodo = $('#select2CompetencesMethodo').val().toString().split(',');
+               var comptHumaine = $('#select2CompetencesHumaine').val().toString().split(',');
 
-            var resultGlobalMatchingPost = getMatchingPoste(compTech, comptMethodo, comptHumaine)
-            console.log(resultGlobalMatchingPost);
-        }
+               var resultGlobalMatchingPost = getMatchingPoste(compTech, comptMethodo, comptHumaine)
+               window.location.href = "clientPage.html";
+           }
 </script>
 
 <body id="page-top"     style="background: url('https://wallpapercave.com/wp/wp2912415.jpg') fixed center">
