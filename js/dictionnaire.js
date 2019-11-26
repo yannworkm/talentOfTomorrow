@@ -1,4 +1,4 @@
-var Boulanger = {
+var boulanger = {
   "Poste" : "Boulanger",
   "Entreprise": "Boulangerie Marie Blachère",
   "Compétences" : {
@@ -23,7 +23,7 @@ var Boulanger = {
   "Description": "Nous recherchons actuellement un boulanger pour un CDI."
 };
 
-var IT_Infra = {
+var iT_Infra = {
   "Poste" : "Architecte infrastructure IT",
   "Entreprise": "",
   "Compétences" : {
@@ -51,7 +51,7 @@ var IT_Infra = {
   "Description": "Nous recherchons actuellement un architecte en infrastructure IT. Ce poste débutera par un CDD de six mois puis un CDI"
 };
 
-var IT_Dev = {
+var iT_Dev = {
   "Poste" : "Ingénieur logiciel",
   "Entreprise": "TRIXELL",
   "Compétences" : {
@@ -77,7 +77,7 @@ var IT_Dev = {
   "Description": "Nous recherchons actuellement un developpeur pour un CDI."
 };
 
-var Commercial = {
+var commercial = {
   "Poste" : "Commercial",
   "Entreprise": "Carrefour",
   "Compétences" : {
@@ -103,7 +103,7 @@ var Commercial = {
   "Description": "Nous recherchons actuellement un commercial. Ce poste débutera par un CDD de six mois puis un CDI"
 };
 
-var Secrétaire = {
+var secrétaire = {
   "Poste" : "Secrétaire",
   "Entreprise": "IBM",
   "Compétences" : {
@@ -128,6 +128,9 @@ var Secrétaire = {
   "Localisation": "",
   "Description": "Nous recherchons actuellement une secrétaire pour un CDI."
 };
+
+var listPost = new Array (boulanger, iT_Infra, iT_Dev, commercial, secrétaire);
+
 
 
 const competencesTech = [
