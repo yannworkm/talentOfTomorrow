@@ -41,8 +41,11 @@
                var compTech = $('#select2Competences').val().toString().split(',');
                var comptMethodo = $('#select2CompetencesMethodo').val().toString().split(',');
                var comptHumaine = $('#select2CompetencesHumaine').val().toString().split(',');
+               var resultGlobalMatchingPost = getMatchingPoste(compTech, comptMethodo, comptHumaine);
 
-               var resultGlobalMatchingPost = getMatchingPoste(compTech, comptMethodo, comptHumaine)
+               var dictstring = JSON.stringify(resultGlobalMatchingPost);
+               var fs = require('fs');
+               fs.writeFile("Resultats/Resultats.json", dictstring);
                window.location.href = "clientPage.html";
            }
 </script>
