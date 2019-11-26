@@ -1,6 +1,7 @@
 var boulanger = {
   "Poste" : "Boulanger",
   "Entreprise": "Boulangerie Marie Blachère",
+  "Catégorie" : "Agroalimentaire" ,
   "Compétences" : {
     "Technique" : {
       "1" : "Pâte" ,
@@ -25,7 +26,8 @@ var boulanger = {
 
 var iT_Infra = {
   "Poste" : "Architecte infrastructure IT",
-  "Entreprise": "",
+  "Entreprise": "ST",
+  "Catégorie" : "Informatique" ,
   "Compétences" : {
     "Technique" : {
       "1" : "Windows" ,
@@ -54,6 +56,7 @@ var iT_Infra = {
 var iT_Dev = {
   "Poste" : "Ingénieur logiciel",
   "Entreprise": "TRIXELL",
+  "Catégorie" : "Informatique" ,
   "Compétences" : {
     "Technique" : {
       "1" : "Java" ,
@@ -80,6 +83,7 @@ var iT_Dev = {
 var commercial = {
   "Poste" : "Commercial",
   "Entreprise": "Carrefour",
+  "Catégorie" : "Vente" ,
   "Compétences" : {
     "Technique" : {
       "1" : "Négociations" ,
@@ -89,8 +93,7 @@ var commercial = {
     "Methodologique" : {
       "1" : "Commercial B to B" ,
       "2" : "Analyse" ,
-      "3" : "Organisation" ,
-      "4" : ""
+      "3" : "Organisation"
     },
     "Humaine" : {
       "1" : "Efficace" ,
@@ -106,6 +109,7 @@ var commercial = {
 var secrétaire = {
   "Poste" : "Secrétaire",
   "Entreprise": "IBM",
+  "Catégorie" : "Secrétariat" ,
   "Compétences" : {
     "Technique" : {
       "1" : "Accueil physique" ,
@@ -119,7 +123,7 @@ var secrétaire = {
       "4" : "Gestion administrative"
     },
     "Humaine" : {
-      "1" : "Accueillant " ,
+      "1" : "Accueillant" ,
       "2" : "Agréable" ,
       "3" : "Humain" ,
       "4" : "Paisible"
@@ -133,41 +137,81 @@ var listPost = new Array (boulanger, iT_Infra, iT_Dev, commercial, secrétaire);
 
 
 
+function getMatchingPoste(compTech, comptMethodo, comptHumaine)
+{
+  var resultGlobalMatching = [];
+  listPost.forEach(function(poste){
+    var actualPoste = poste['Poste'];
+    var matchingcompTech = getMatchingComp(Object.values(poste['Compétences']['Technique']),compTech);
+    var matchingcompMethodo = getMatchingComp(Object.values(poste['Compétences']['Methodologique']),comptMethodo);
+    var matchingcompHumaine = getMatchingComp(Object.values(poste['Compétences']['Humaine']),comptHumaine);
+    var globalmatching = Math.round(((matchingcompTech+matchingcompMethodo+matchingcompHumaine)/3)*100)/100;
+    resultGlobalMatching.push(
+      {
+        "Poste" : actualPoste,
+        "Résultat" : globalmatching+"%"
+      }
+    );
+  });
+  return resultGlobalMatching;
+}
+
+function getMatchingComp(listPost, listCandidat) {
+    var matches = [];
+    for ( var i = 0; i < listPost.length; i++ ) {
+        for ( var e = 0; e < listCandidat.length; e++ ) {
+            if ( listPost[i] === listCandidat[e] ) matches.push( listPost[i] );
+        }
+    }
+    return Math.round((matches.length/listPost.length)*10000)/100;
+}
+
 const competencesTech = [
-  "Javascript",
-  "Symfony",
-  "php",
-  "TypeScript",
-  "perl",
-  "Angular",
-  "NgRx",
-  "RxJs",
+  "Pâte",
+  "Viennoiserie",
+  "Levain dur",
+  "Pâtisserie",
+  "Windows",
+  "Linux",
+  "Serveur",
+  "NAS",
+  "Messagerie",
+  "TCP",
+  "Java",
+  "C++",
   "Python",
-  "C#",
-  "AngularJS",
-  "Bootstrap4",
-  "Ajax",
-  "ReactNative",
-  "ReactJS",
-  "MongoDB",
-  "SQL",
-  ".net",
-  "CakePHP"
+  "Négociations",
+  "Gérance",
+  "Ventes",
+  "Accueil physique",
+  "Accueil téléphonique",
+  "Standard"
 ];
 
 const competencesMeth = [
-  "Kanban",
-  "Scrum",
-  "Jira",
-  "Git",
+  "Fabrication",
+  "Cuisson",
+  "Active directory",
+  "Sauvegarde",
+  "Support",
+  "Assistance",
+  "Agile",
+  "Visual Studio",
+  "Test unitaires",
   "Jenkins",
-  "Docker",
-  "Kubernetes"
+  "Commercial B to B",
+  "Analyse",
+  "Organisation",
+  "Rédaction de dossier",
+  "Notification de dossier",
+  "Gestion des courriers",
+  "Gestion administrative"
 ];
 
 const competencesHumaine = [
   "Curieux",
   "Accessible",
+  "Accueillant",
   "Agréable",
   "Altruiste",
   "Ambitieux",
@@ -178,26 +222,49 @@ const competencesHumaine = [
   "Coopératif",
   "Persévérant",
   "Précis",
-  "minutieux",
+  "Minutieux",
   "Rigoureux",
   "Observateur",
   "Bienveillant",
   "Loyale",
-  "généreux",
-  "perfectionniste",
-  "créatif",
-  "calme",
+  "Généreux",
+  "Perfectionniste",
+  "Créatif",
+  "Calme",
   "patient",
   "ponctuel",
   "pragmatique",
-  "volontaire",
-  "vigilant",
-  "vif",
-  "sincère",
-  "sociable",
+  "Volontaire",
+  "Vigilant",
+  "Vif",
+  'Rigoureux',
+  "Sincère",
+  "Sociable",
   "vaillant",
-  "prudent",
-  "pugnace",
-  "paisible",
-  "optimiste"
+  "Prudent",
+  "Pugnace",
+  "Paisible",
+  "Optimiste",
+  "Chaleureux",
+  "Débrouillard",
+  "Polyvalent",
+  "Responsable",
+  "Accessible",
+  "Déterminé",
+  "Décidé",
+  "Méthodique",
+  "Efficace",
+  "Souriant",
+  "Spontané",
+  "Sociable",
+  "Agréable",
+  "Humain",
+  "Paisible"
+];
+
+const category = [
+  "Agroalimentaire",
+  "Informatique",
+  "Vente",
+  "Secrétariat"
 ];
