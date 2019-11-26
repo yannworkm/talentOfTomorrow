@@ -22,7 +22,7 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet" />
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
-    
+    <script src="js/dictionnaire.js"></script>
 </head>
 
 <script rel="stylesheet">
@@ -31,19 +31,19 @@
         $('#select2Competences1').select2();
         $('.js-example-basic-multiple').select2();
 
-        const competencesTech = ['Javascript', 'Symfony', 'php', 'TypeScript', 'perl', 'Angular', 'NgRx', 'RxJs', 'Python', 'C#', 'AngularJS', 'Bootstrap4', 'CakePHP'];
-
-        const competencesMeth = ['Kanban', 'Scrum', 'Jira', 'Git', 'Jenkins', 'Docker', 'Kubernetes'];
-
-        const competencesHumaine = ['Curieux', 'Accessible', 'Agréable', 'Altruiste', 'Ambitieux', 'Dynamique', 'Honnête', 'Autonome', 'Combatif', 'Coopératif', 'Persévérant', 'Précis', 'minutieux'];
-
-        competencesTech.forEach(element => $('#select2Competences').append('<option value="AL">'+element+'</option>'));
-
-        competencesMeth.forEach(element => $('#select2CompetencesMethodo').append('<option value="AL">' + element + '</option>'));
-
-        competencesHumaine.forEach(element => $('#select2CompetencesHumaine').append('<option value="AL">' + element + '</option>'));
-
+        competencesTech.forEach(element => $('#select2Competences').append('<option value="'+ element+'">'+element+'</option>'));
+        competencesMeth.forEach(element => $('#select2CompetencesMethodo').append('<option value="'+ element+'">' + element + '</option>'));
+        competencesHumaine.forEach(element => $('#select2CompetencesHumaine').append('<option value="'+ element+'">' + element + '</option>'));
+        
     });
+
+     function valideForm() {
+            var compTech = $('#select2Competences').val().split(',');
+            var comptMethodo = $('#select2CompetencesMethodo').val().split(',');
+            var comptHumaine = $('#select2CompetencesHumaine').val().split(',');
+
+            alert(compTech, comptHumaine, comptMethodo);
+        }
 </script>
 
 <body id="page-top"     style="background: url('https://wallpapercave.com/wp/wp2912415.jpg') fixed center">
@@ -105,11 +105,13 @@
                     <label for="exampleInputPost1">Qualités humaines</label><br>
                     <select id="select2CompetencesHumaine" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;"></select>
                 </div>
-                <button type="submit" class="btn btn-primary">Valider votre fiche de compétences</button>
+                <button type="submit" class="btn btn-primary" onclick="valideForm();">Valider votre fiche de compétences <i class="fas fa-check-double"></i></button>
             </div>
         </div>
         <div class="card-footer text-muted">
+            <i class="fas fa-dragon"></i>
             Talent Of Tomorrow
+            <i class="fas fa-dragon"></i>
         </div>
     </div>
     </div>
