@@ -21,7 +21,8 @@ var boulanger = {
     }
   },
   Localisation: "Voiron",
-  Description: "Nous recherchons actuellement un boulanger pour un CDI."
+  Description: "Nous recherchons actuellement un boulanger pour un CDI.",
+  PourcentageMatching : ""
 };
 
 var iT_Infra = {
@@ -51,7 +52,8 @@ var iT_Infra = {
   },
   Localisation: "Grenoble",
   Description:
-    "Nous recherchons actuellement un architecte en infrastructure IT. Ce poste débutera par un CDD de six mois puis un CDI"
+    "Nous recherchons actuellement un architecte en infrastructure IT. Ce poste débutera par un CDD de six mois puis un CDI",
+  PourcentageMatching : ""
 };
 
 var iT_Dev = {
@@ -78,7 +80,8 @@ var iT_Dev = {
     }
   },
   Localisation: "Moirans",
-  Description: "Nous recherchons actuellement un developpeur pour un CDI."
+  Description: "Nous recherchons actuellement un developpeur pour un CDI.",
+  PourcentageMatching : ""
 };
 
 var commercial = {
@@ -105,7 +108,8 @@ var commercial = {
   },
   Localisation: "Gières",
   Description:
-    "Nous recherchons actuellement un commercial. Ce poste débutera par un CDD de six mois puis un CDI"
+    "Nous recherchons actuellement un commercial. Ce poste débutera par un CDD de six mois puis un CDI",
+  PourcentageMatching : ""
 };
 
 var secrétaire = {
@@ -132,13 +136,15 @@ var secrétaire = {
     }
   },
   Localisation: "",
-  Description: "Nous recherchons actuellement une secrétaire pour un CDI."
+  Description: "Nous recherchons actuellement une secrétaire pour un CDI.",
+  PourcentageMatching : ""
 };
 
 var listPost = new Array(boulanger, iT_Infra, iT_Dev, commercial, secrétaire);
 
+var resultGlobalMatching = [];
+
 function getMatchingPoste(compTech, comptMethodo, comptHumaine) {
-  var resultGlobalMatching = [];
   listPost.forEach(function(poste){
     var actualPoste = poste['Poste'];
     var matchingcompTech = getMatchingComp(Object.values(poste['Compétences']['Technique']),compTech);
@@ -147,20 +153,15 @@ function getMatchingPoste(compTech, comptMethodo, comptHumaine) {
     var globalmatching = Math.round(((matchingcompTech+matchingcompMethodo+matchingcompHumaine)/3)*100)/100;
     if (globalmatching >= 50)
     {
-      resultGlobalMatching.push(
-        {
-          "Poste" : actualPoste,
-          "Résultat" : globalmatching+"%"
-        }
-      );
+      poste['PourcentageMatching']=globalmatching;
+      resultGlobalMatching.push(poste);
     }
   });
-  return resultGlobalMatching;
 }
 
-function createDicoPosteWithResultGlobalMatching(resultGlobalMatchingPost)
+function createDicoPosteWithResultGlobalMatching()
 {
-
+  console.log(resultGlobalMatching);
 }
 
 
