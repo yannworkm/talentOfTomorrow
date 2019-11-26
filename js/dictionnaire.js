@@ -7,17 +7,34 @@ var boulanger = {
       "1": "Pâte",
       "2": "Viennoiserie",
       "3": "Levain dur",
-      "4": "Pâtisserie"
+      "4": "Pâtisserie",
+      "5": "Pain",
+      "6": "Tradition Française",
+      "7": "Pains spéciaux",
+      "8": "Nettoyage du matériel",
+      "9": "Respect des normes",
+      "10": "Stocker les produits",
+      "11": "Assurer l'ouverture",
+      "12": "Assurer la fermeture",
+      "13": "Dater les produits",
+      "14": "Assurer la réception des matières premières",
+      "15": "Gérer l'état des stocks"
+
     },
     Methodologique: {
       "1": "Fabrication",
-      "2": "Cuisson"
+      "2": "Cuisson",
+      "3": "Division"
+      "4": "Pétrissage",
+      "5": "Façonnage",
+      "6": "Finition"
     },
     Humaine: {
       "1": "Ambitieux",
       "2": "Rigoureux",
       "3": "Accueillant",
-      "4": "Chaleureux"
+      "4": "Chaleureux",
+      "5": "Respectueux"
     }
   },
   Localisation: "Voiron",
@@ -36,10 +53,13 @@ var iT_Infra = {
       "3": "Serveur",
       "4": "NAS",
       "5": "Messagerie",
-      "6": "TCP"
+      "6": "TCP",
+      "7": "Active directory",
+      "8": "Pare-feu",
+      "9":
     },
     Methodologique: {
-      "1": "Active directory",
+      "1": "Chiffrement",
       "2": "Sauvegarde",
       "3": "Support",
       "4": "Assistance"
@@ -180,6 +200,17 @@ const competencesTech = [
   "Viennoiserie",
   "Levain dur",
   "Pâtisserie",
+  "Pain",
+  "Tradition Française",
+  "Pains spéciaux",
+  "Nettoyage du matériel",
+  "Respect des normes",
+  "Stocker les produits",
+  "Assurer l'ouverture",
+  "Assurer la fermeture",
+  "Dater les produits",
+  "Assurer la réception des matières premières",
+  "Gérer l'état des stocks",
   "Windows",
   "Linux",
   "Serveur",
@@ -201,6 +232,10 @@ const competencesTech = [
 const competencesMeth = [
   "Fabrication",
   "Cuisson",
+  "Division"
+  "Pétrissage",
+  "Façonnage",
+  "Finition"
   "Active directory",
   "Sauvegarde",
   "Support",
@@ -269,7 +304,8 @@ const competencesHumaine = [
   "Sociable",
   "Agréable",
   "Humain",
-  "Paisible"
+  "Paisible",
+  "Respectueux"
 ];
 
 const category = ["Agroalimentaire", "Informatique", "Vente", "Secrétariat"];
