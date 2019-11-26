@@ -146,15 +146,24 @@ function getMatchingPoste(compTech, comptMethodo, comptHumaine)
     var matchingcompMethodo = getMatchingComp(Object.values(poste['Compétences']['Methodologique']),comptMethodo);
     var matchingcompHumaine = getMatchingComp(Object.values(poste['Compétences']['Humaine']),comptHumaine);
     var globalmatching = Math.round(((matchingcompTech+matchingcompMethodo+matchingcompHumaine)/3)*100)/100;
-    resultGlobalMatching.push(
-      {
-        "Poste" : actualPoste,
-        "Résultat" : globalmatching+"%"
-      }
-    );
+    if (globalmatching >= 50)
+    {
+      resultGlobalMatching.push(
+        {
+          "Poste" : actualPoste,
+          "Résultat" : globalmatching+"%"
+        }
+      );
+    }
   });
   return resultGlobalMatching;
 }
+
+function createDicoPosteWithResultGlobalMatching(resultGlobalMatchingPost)
+{
+
+}
+
 
 function getMatchingComp(listPost, listCandidat) {
     var matches = [];
