@@ -157,6 +157,7 @@ function getMatchingPoste(compTech, comptMethodo, comptHumaine) {
       resultGlobalMatching.push(poste);
     }
   });
+  return resultGlobalMatching;
 }
 
 function createDicoPosteWithResultGlobalMatching()
