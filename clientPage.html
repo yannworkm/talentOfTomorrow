@@ -136,12 +136,14 @@
         <footer class="sticky-footer bg-white">
           <script>
             $(document).ready(function() {
+
+              var profil = localStorage.getItem("Resultat");
+
+              console.log(profil)
               
-              if(typeof localStorage.getItem("Resultat") !== 'undefined' && localStorage.getItem("Resultat") !== 'undefined'){
+              if(typeof profil !== 'undefined' && profil !== []) {
                 
-                localStorage.getItem("Resultat").forEach(function(element){
-                  listPostDemo.push(localStorage.getItem("Resultat"))              
-                })                
+                  //listPostDemo.push(localStorage.getItem("Resultat"))              
               }
 
               listPostDemo.forEach(function(element){
@@ -205,12 +207,6 @@
         </div>
       </div>
     </div>
-
-    <script rel="stylesheet">
-        $(document).ready(function () {
-          console.log(localStorage.getItem("Resultat"));
-        });
-    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
