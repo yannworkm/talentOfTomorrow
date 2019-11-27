@@ -137,13 +137,15 @@
           <script>
             $(document).ready(function() {
 
-              var profil = localStorage.getItem("Resultat");
+              var profil = JSON.parse(localStorage.getItem("Resultat"));
 
               console.log(profil)
-              
+
               if(typeof profil !== 'undefined' && profil !== []) {
-                
-                  //listPostDemo.push(localStorage.getItem("Resultat"))              
+
+                  profil.forEach(function(element){
+                    listPostDemo.push(element)              
+                  })
               }
 
               listPostDemo.forEach(function(element){
@@ -224,6 +226,5 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-    <script src="js/dictionnaire.js"></script>
   </body>
 </html>
