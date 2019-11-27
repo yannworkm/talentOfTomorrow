@@ -10619,7 +10619,12 @@ span.badge-notification[data-badge]::after {
   color: white;
   background-color: red;
 }
-
+span.badge-one.badge-notification[data-badge]::after {
+  top: -11px;
+  right: -24px;
+  color: white;
+  background-color: green;
+}
 .bg-register-image {
   background: url("https://www.saint-medard-en-jalles.fr/storage/attachments/uploads/ressourceshumaines_bandeau2.jpg");
   background-position: center;
