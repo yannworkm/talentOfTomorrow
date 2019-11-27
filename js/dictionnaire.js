@@ -7,17 +7,34 @@ var boulanger = {
       "1": "Pâte",
       "2": "Viennoiserie",
       "3": "Levain dur",
-      "4": "Pâtisserie"
+      "4": "Pâtisserie",
+      "5": "Pain",
+      "6": "Tradition Française",
+      "7": "Pains spéciaux",
+      "8": "Nettoyage du matériel",
+      "9": "Respect des normes",
+      "10": "Stocker les produits",
+      "11": "Assurer l'ouverture",
+      "12": "Assurer la fermeture",
+      "13": "Dater les produits",
+      "14": "Assurer la réception des matières premières",
+      "15": "Gérer l'état des stocks"
+
     },
     Methodologique: {
       "1": "Fabrication",
-      "2": "Cuisson"
+      "2": "Cuisson",
+      "3": "Division"
+      "4": "Pétrissage",
+      "5": "Façonnage",
+      "6": "Finition"
     },
     Humaine: {
       "1": "Ambitieux",
       "2": "Rigoureux",
       "3": "Accueillant",
-      "4": "Chaleureux"
+      "4": "Chaleureux",
+      "5": "Respectueux"
     }
   },
   Localisation: "Voiron",
@@ -36,18 +53,42 @@ var iT_Infra = {
       "3": "Serveur",
       "4": "NAS",
       "5": "Messagerie",
-      "6": "TCP"
+      "6": "TCP",
+      "7": "Active directory",
+      "8": "Pare-feu",
+      "9": "AWS",
+      "10": "Azure",
+      "11": "Docker",
+      "12": "Ansible",
+      "13": "DevOps",
+      "14": "Gitlab",
+      "15": "Cloud",
+      "16": "DevOps",
+      "17": "DNS",
+      "18": "VmWare",
+      "19": "HyperV"
+
     },
     Methodologique: {
-      "1": "Active directory",
+      "1": "Chiffrement",
       "2": "Sauvegarde",
       "3": "Support",
-      "4": "Assistance"
+      "4": "Assistance",
+      "5": "Developpement",
+      "6": "Supervision",
+      "7": "Maintenance",
+      "8" "Architecture",
+      "9": "Optimisation",
+      "10": "Automatisation"
+
     },
     Humaine: {
       "1": "Débrouillard",
       "2": "Polyvalent",
-      "3": "Responsable"
+      "3": "Responsable",
+      "4": "Autonome",
+      "5": "Minutieux",
+      "6": "Sérieux"
     }
   },
   Localisation: "Grenoble",
@@ -56,7 +97,7 @@ var iT_Infra = {
   PourcentageMatching : ""
 };
 
-var iT_Dev = {
+var iT_Dev1 = {
   Poste: "Ingénieur logiciel",
   Entreprise: "TRIXELL",
   Catégorie: "Informatique",
@@ -84,6 +125,45 @@ var iT_Dev = {
   PourcentageMatching : ""
 };
 
+var iT_Dev2 = {
+  Poste: "Developpeur Web",
+  Entreprise: "Selz",
+  Catégorie: "Informatique",
+  Compétences: {
+    Technique: {
+      "1": "PHP",
+      "2": "JavaScript",
+      "3": "HTML",
+      "4": "CSS",
+      "5": "Django",
+      "3": "Python"
+    },
+    Methodologique: {
+      "1": "Scrum",
+      "2": "Visual Studio",
+      "3": "Test unitaires",
+      "4": "Jenkins",
+      "5": "Photoshop",
+      "6": "Saas",
+      "7": "Mercurial",
+      "8": "Responsive"
+    },
+    Humaine: {
+      "1": "Accessible",
+      "2": "Déterminé",
+      "3": "Décidé",
+      "4": "Méthodique",
+      "5": "Créatif",
+      "6": "Autonome",
+      "7": "Rigoureux"
+    }
+  },
+  Localisation: "Paris",
+  Description: "Nous recherchons actuellement un developpeur pour un CDI.",
+  PourcentageMatching : ""
+};
+
+
 var commercial = {
   Poste: "Commercial",
   Entreprise: "Carrefour",
@@ -92,18 +172,28 @@ var commercial = {
     Technique: {
       "1": "Négociations",
       "2": "Gérance",
-      "3": "Ventes"
+      "3": "Ventes",
+      "4": "Business Développement",
+      "5": "Prospection",
+      "6": "Téléphonie",
+      "7": "Accompagnement"
     },
     Methodologique: {
       "1": "Commercial B to B",
       "2": "Analyse",
-      "3": "Organisation"
+      "3": "Organisation",
+      "4": "Marketing",
+      "5": "Mise en place de partenariat",
+      "6": "Stratégie"
     },
     Humaine: {
       "1": "Efficace",
       "2": "Souriant",
       "3": "Spontané",
-      "4": "Sociable"
+      "4": "Sociable",
+      "5": "Rigoureux",
+      "6": "Sympathique",
+      "7": "Autonome"
     }
   },
   Localisation: "Gières",
@@ -118,15 +208,27 @@ var secrétaire = {
   Catégorie: "Secrétariat",
   Compétences: {
     Technique: {
-      "1": "Accueil physique",
-      "2": "Accueil téléphonique",
-      "3": "Standard"
+      "1": "Excel",
+      "2": "Word",
+      "3": "Salesforce",
+      "4": "Clarity",
+      "5": "SQL"
+
     },
     Methodologique: {
       "1": "Rédaction de dossier,",
       "2": "Notification de dossier",
       "3": "Gestion des courriers",
-      "4": "Gestion administrative"
+      "4": "Gestion administrative",
+      "5": "Gestion clients"
+      "6": "Accueil physique",
+      "7": "Accueil téléphonique",
+      "8": "Standard",
+      "9": "Analyser des demandes",
+      "10": "Tâches administratives",
+      "11": "Archivage",
+      "12": "Gestion des plannings",
+      "13": "Facturation"
     },
     Humaine: {
       "1": "Accueillant",
@@ -140,7 +242,7 @@ var secrétaire = {
   PourcentageMatching : ""
 };
 
-var listPost = new Array(boulanger, iT_Infra, iT_Dev, commercial, secrétaire);
+var listPost = new Array(boulanger, iT_Infra, iT_Dev1,iT_Dev2, commercial, secrétaire);
 
 var resultGlobalMatching = [];
 
@@ -181,42 +283,99 @@ const competencesTech = [
   "Viennoiserie",
   "Levain dur",
   "Pâtisserie",
+  "Pain",
+  "Tradition Française",
+  "Pains spéciaux",
+  "Nettoyage du matériel",
+  "Respect des normes",
+  "Stocker les produits",
+  "Assurer l'ouverture",
+  "Assurer la fermeture",
+  "Dater les produits",
+  "Assurer la réception des matières premières",
+  "Gérer l'état des stocks",
   "Windows",
   "Linux",
   "Serveur",
   "NAS",
   "Messagerie",
   "TCP",
+  "Active directory",
+  "Pare-feu",
+  "AWS",
+  "Azure",
+  "Docker",
+  "Ansible",
+  "DevOps",
+  "Gitlab",
+  "Cloud",
+  "DevOps",
+  "DNS",
+  "VmWare",
+  "HyperV"
   "Java",
   "C++",
   "Python",
+  "PHP",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Django",
   "Négociations",
   "Gérance",
   "Ventes",
-  "Accueil physique",
-  "Accueil téléphonique",
-  "Standard"
+  "Excel",
+  "Word",
+  "Salesforce",
+  "Clarity",
+  "SQL"
 ];
 
 //
 const competencesMeth = [
   "Fabrication",
   "Cuisson",
-  "Active directory",
+  "Division"
+  "Pétrissage",
+  "Façonnage",
+  "Finition"
   "Sauvegarde",
   "Support",
   "Assistance",
+  "Developpement",
+  "Supervision",
+  "Maintenance",
+  "Architecture",
+  "Optimisation",
+  "Automatisation"
   "Agile",
   "Visual Studio",
   "Test unitaires",
   "Jenkins",
+  "Scrum",
+  "Photoshop",
+  "Saas",
+  "Mercurial",
+  "Responsive"
   "Commercial B to B",
   "Analyse",
   "Organisation",
-  "Rédaction de dossier",
+  "Marketing",
+  "Mise en place de partenariat",
+  "Stratégie"
+  "Rédaction de dossier,",
   "Notification de dossier",
   "Gestion des courriers",
-  "Gestion administrative"
+  "Gestion administrative",
+  "Gestion clients"
+  "Accueil physique",
+  "Accueil téléphonique",
+  "Standard",
+  "Analyser des demandes",
+  "Tâches administratives",
+  "Archivage",
+  "Gestion des plannings",
+  "Facturation"
 ];
 
 const competencesHumaine = [
@@ -242,16 +401,15 @@ const competencesHumaine = [
   "Perfectionniste",
   "Créatif",
   "Calme",
-  "patient",
-  "ponctuel",
-  "pragmatique",
+  "Patient",
+  "Ponctuel",
+  "Pragmatique",
   "Volontaire",
   "Vigilant",
   "Vif",
-  "Rigoureux",
   "Sincère",
   "Sociable",
-  "vaillant",
+  "Vaillant",
   "Prudent",
   "Pugnace",
   "Paisible",
@@ -260,17 +418,18 @@ const competencesHumaine = [
   "Débrouillard",
   "Polyvalent",
   "Responsable",
-  "Accessible",
   "Déterminé",
   "Décidé",
   "Méthodique",
   "Efficace",
   "Souriant",
   "Spontané",
-  "Sociable",
   "Agréable",
   "Humain",
-  "Paisible"
+  "Paisible",
+  "Respectueux",
+  "Sympathique",
+  "Sérieux"
 ];
 
 const category = ["Agroalimentaire", "Informatique", "Vente", "Secrétariat"];
