@@ -53,6 +53,9 @@
     $(document).ready(function() {
       $("#secteurAc").select2();
       $(".secteur").select2();
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
     });
   </script>
 
@@ -171,9 +174,16 @@
                   type="text"
                   class="form-control bg-light border-0 small"
                   placeholder="Rechercher..."
+                  disabled
                 />
                 <div class="input-group-append">
-                  <button class="btn btn-primary" type="button">
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Cette fonctionnalité n'est pas encore disponible"
+                  >
                     <i class="fas fa-search fa-sm"></i>
                   </button>
                 </div>
@@ -202,7 +212,12 @@
                             />
                           </div>
                           <div class="form-group">
-                            <select id="secteurAc" class="secteur" name="secteur" style="width: 100%;"></select>
+                            <select
+                              id="secteurAc"
+                              class="secteur"
+                              name="secteur"
+                              style="width: 100%;"
+                            ></select>
                           </div>
                           <div class="form-group">
                             <input
@@ -346,10 +361,14 @@
     <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/dictionnaire.js"></script>
     <script rel="stylesheet">
-        $(document).ready(function () {
-          $('#secteurAc').select2();
-          category.forEach(element => $('#secteurAc').append('<option value="'+ element+'">'+element+'</option>'));
-        });
+      $(document).ready(function() {
+        $("#secteurAc").select2();
+        category.forEach(element =>
+          $("#secteurAc").append(
+            '<option value="' + element + '">' + element + "</option>"
+          )
+        );
+      });
     </script>
   </body>
 </html>
