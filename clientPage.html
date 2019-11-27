@@ -105,7 +105,9 @@
             <form
               class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
             >
-              <div class="input-group">
+              <div class="row">
+                <div class="col">
+                  <div class="input-group">
                 <input
                   type="text"
                   class="form-control bg-light border-0 small"
@@ -117,6 +119,11 @@
                   <button class="btn btn-primary" type="button">
                     <i class="fas fa-search fa-sm"></i>
                   </button>
+                </div>
+              </div>
+                </div>
+                <div class="col text-left">
+                  <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-outline-dark">Contact <i class="fas fa-id-card"></i></button>
                 </div>
               </div>
             </form>
@@ -214,6 +221,27 @@
               Cancel
             </button>
             <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Contacts</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div>Entreprise Pure Web</div>
+            <div>Tel - 0476567654</div>
+            <div>Mail - yannchauvin.work@gmail.com</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
           </div>
         </div>
       </div>
