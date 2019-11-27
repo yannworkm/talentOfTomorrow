@@ -185,8 +185,24 @@
                       element.Entreprise +
                       ' </h6> <p class="card-text">' +
                       element.Description +
-                      '</p><div class="row"> <div class="col"> <a href="#" class="btn btn-outline-secondary" role="button" data-toggle="modal" data-target="#exampleModalScrollable" >Postuler <i class="far fa-arrow-alt-circle-right"></i> </a> </div><div class="col"> <button data-toggle="tooltip" data-placement="top" title="Le taux de correspondance est de '+element.PourcentageMatching+'%" id="pastilleResult" class="btn btn-success btn-circle btn-lg disabled"  style="width: 30px; height: 35px; margin-left: 80px;" ></a> </div></div><div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true" > <div class="modal-dialog modal-dialog-scrollable" role="document" > <div class="modal-content"> <div class="modal-header text-black"> <h5 class="modal-title text-black" id="exampleModalScrollableTitle" style="color: black!important;" > Voulez-vous confirmer votre candidature ? </h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close" > <span aria-hidden="true">&times;</span> </button> </div><div class="modal-body"> <div class="container"> <div class="row" style="margin: 30px;"> <div class="col" style="text-align: center;"> <a href="#" data-dismiss="modal" class="btn btn-success btn-circle btn-lg" style="width: 100px; height: 100px;" > <i class="fas fa-check"></i> </a> </div><div class="col" style="text-align: center;"> <a href="#" data-dismiss="modal" class="btn btn-danger btn-circle btn-lg" style="width: 100px; height: 100px;" > <i class="fas fa-times"></i> </a> </div></div></div></div></div></div></div></div></div></div>'
+                      '<hr class="sidebar-divider" /><button class="btn btn-outline-info btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample'+element.Entreprise+'" aria-expanded="false"><i class="fas fa-search-plus"></i> Compétences requises</button><div id="collapseExample'+element.Entreprise+'" class="collapse"><div class="card-body" id="badgeCompetence'+element.Entreprise+'"></div></div></p><div class="row"> <div class="col"> <a href="#" class="btn btn-outline-success btn-sm" role="button" data-toggle="modal" data-target="#exampleModalScrollable" >Postuler <i class="far fa-arrow-alt-circle-right"></i> </a> </div><div class="col"> <button data-toggle="tooltip" data-placement="top" title="Le taux de correspondance est de '+element.PourcentageMatching+'%" id="pastilleResult" class="btn btn-success btn-circle btn-lg disabled"  style="width: 30px; height: 35px; margin-left: 80px;" ></a> </div></div><div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true" > <div class="modal-dialog modal-dialog-scrollable" role="document" > <div class="modal-content"> <div class="modal-header text-black"> <h5 class="modal-title text-black" id="exampleModalScrollableTitle" style="color: black!important;" > Voulez-vous confirmer votre candidature ? </h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close" > <span aria-hidden="true">&times;</span> </button> </div><div class="modal-body"> <div class="container"> <div class="row" style="margin: 30px;"> <div class="col" style="text-align: center;"> <a href="#" data-dismiss="modal" class="btn btn-success btn-circle btn-lg" style="width: 100px; height: 100px;" > <i class="fas fa-check"></i> </a> </div><div class="col" style="text-align: center;"> <a href="#" data-dismiss="modal" class="btn btn-danger btn-circle btn-lg" style="width: 100px; height: 100px;" > <i class="fas fa-times"></i> </a> </div></div></div></div></div></div></div></div></div></div>'
                   );
+                  var compsTech = element.Compétences.Technique;
+                  var compsMeth = element.Compétences.Methodologique;
+                  var compsHum = element.Compétences.Humaine;
+
+                  for (const property in compsTech) {
+                      $('#badgeCompetence'+element.Entreprise).append('<span class="badge badge-danger" style="margin-left:2px;">'+`${compsTech[property]}`+'</span>');
+                  }
+
+                  for (const property in compsMeth) {
+                      $('#badgeCompetence'+element.Entreprise).append('<span class="badge badge-warning" style="margin-left:2px;">'+`${compsMeth[property]}`+'</span>');
+                  }
+
+                  for (const property in compsHum) {
+                      $('#badgeCompetence'+element.Entreprise).append('<span class="badge badge-primary" style="margin-left:2px;">'+`${compsHum[property]}`+'</span>');
+                  }
+
                   if (parseInt(element.PourcentageMatching, 10) < 80) {
                     $("#pastilleResult").addClass(
                       "btn btn-warning btn-circle btn-lg disabled"
