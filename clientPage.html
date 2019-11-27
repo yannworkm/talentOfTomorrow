@@ -139,10 +139,7 @@
 
               var profil = JSON.parse(localStorage.getItem("Resultat"));
 
-              console.log(profil)
-
               if(typeof profil !== 'undefined' && profil !== []) {
-
                   profil.forEach(function(element){
                     listPostDemo.push(element)              
                   })
