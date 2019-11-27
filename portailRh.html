@@ -142,8 +142,6 @@
                   type="text"
                   class="form-control bg-light border-0 small"
                   placeholder="Rechercher..."
-                  aria-label="Search"
-                  aria-describedby="basic-addon2"
                 />
                 <div class="input-group-append">
                   <button class="btn btn-primary" type="button">
@@ -154,21 +152,65 @@
             </form>
           </nav>
           <div class="container-fluid">
-            <div class="row">
-              <div class="col">
-                <div class="card">
+            <div class="row" style="margin-bottom: 30px;">
+              <div class="col-sm">
+                <div class="card text-white bg-dark" style="width: 18rem;">
+                  <div>
+                    <div class="card-header bg-dark text-center">
+                      <div class="row">
+                        <div class="col">
+                          Nom du poste
+                        </div>
+                        <div class="col text-right">
+                          <div
+                            data-badge="3"
+                            class="pmd-badge pmd-badge-overlap pmd-badge-danger"
+                          >
+                            <span class="badge-notification mt-5" data-badge="4"
+                              ><i class="fas fa-user-check"></i
+                            ></span>
+                            <span
+                              class="badge-notification mt-5 badge-one"
+                              data-badge="4"
+                              ><i class="fas fa-envelope"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="card-body">
-                    This is some text within a card body.
+                    <h5 class="card-title">Développeur Full-Stack JS</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Entreprise - Leadformance
+                    </h6>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="row">
+                      <div
+                        class="col-sm"
+                        style="margin-bottom: 20px; text-align: center;"
+                      >
+                        <button type="button" class="btn btn-outline-light">
+                          Edition <i class="far fa-edit"></i>
+                        </button>
+                      </div>
+                      <div
+                        class="col-sm"
+                        style="margin-bottom: 20px; text-align: center;"
+                      >
+                        <button type="button" class="btn btn-outline-light">
+                          Vue <i class="fab fa-searchengin"></i>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    This is some text within a card body.
-                  </div>
-                </div>
-              </div>
+              <div class="col-sm"></div>
+              <div class="col-sm"></div>
             </div>
           </div>
           <!-- /.container-fluid -->
