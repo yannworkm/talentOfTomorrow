@@ -137,13 +137,12 @@
           <script>
             $(document).ready(function() {
 
-              var profil = localStorage.getItem("Resultat");
-
-              console.log(profil)
+              var profil = JSON.parse(localStorage.getItem("Resultat"));
 
               if(typeof profil !== 'undefined' && profil !== []) {
-
-                  //listPostDemo.push(localStorage.getItem("Resultat"))
+                  profil.forEach(function(element){
+                    listPostDemo.push(element)              
+                  })
               }
 
               listPostDemo.forEach(function(element){
