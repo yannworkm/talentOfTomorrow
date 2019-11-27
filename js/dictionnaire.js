@@ -51,8 +51,8 @@ var iT_Infra = {
       "2": "Linux",
       "3": "Serveur",
       "4": "NAS",
-      "5": "Messagerie",
-      "6": "TCP",
+      "5": "Messagerie"
+      /*"6": "TCP",
       "7": "Active directory",
       "8": "Pare-feu",
       "9": "AWS",
@@ -65,7 +65,7 @@ var iT_Infra = {
       "16": "DevOps",
       "17": "DNS",
       "18": "VmWare",
-      "19": "HyperV"
+      "19": "HyperV"*/
 
     },
     Methodologique: {
@@ -73,12 +73,12 @@ var iT_Infra = {
       "2": "Sauvegarde",
       "3": "Support",
       "4": "Assistance",
-      "5": "Developpement",
-      "6": "Supervision",
+      "5": "Developpement"
+      /*"6": "Supervision",
       "7": "Maintenance",
       "8" : "Architecture",
       "9" : "Optimisation",
-      "10": "Automatisation"
+      "10": "Automatisation"*/
     },
     Humaine: {
       "1": "Débrouillard",
@@ -133,8 +133,7 @@ var iT_Dev2 = {
       "2": "JavaScript",
       "3": "HTML",
       "4": "CSS",
-      "5": "Django",
-      "3": "Python"
+      "5": "Django"
     },
     Methodologique: {
       "1": "Scrum",
@@ -142,9 +141,9 @@ var iT_Dev2 = {
       "3": "Test unitaires",
       "4": "Jenkins",
       "5": "Photoshop",
-      "6": "Saas",
+      /*"6": "Saas",
       "7": "Mercurial",
-      "8": "Responsive"
+      "8": "Responsive"*/
     },
     Humaine: {
       "1": "Accessible",
@@ -240,7 +239,7 @@ var secrétaire = {
   PourcentageMatching : ""
 };
 
-var listPost = new Array(boulanger, iT_Infra, iT_Dev1,iT_Dev2, commercial, secrétaire);
+var listPost = new Array(iT_Infra, iT_Dev1,iT_Dev2);
 
 var resultGlobalMatching = [];
 
@@ -277,7 +276,7 @@ function getMatchingComp(listPost, listCandidat) {
 }
 
 const competencesTech = [
-  "Pâte",
+  /*"Pâte",
   "Viennoiserie",
   "Levain dur",
   "Pâtisserie",
@@ -291,13 +290,13 @@ const competencesTech = [
   "Assurer la fermeture",
   "Dater les produits",
   "Assurer la réception des matières premières",
-  "Gérer l'état des stocks",
+  "Gérer l'état des stocks",*/
   "Windows",
   "Linux",
   "Serveur",
   "NAS",
   "Messagerie",
-  "TCP",
+  /*"TCP",
   "Active directory",
   "Pare-feu",
   "AWS",
@@ -310,7 +309,7 @@ const competencesTech = [
   "DevOps",
   "DNS",
   "VmWare",
-  "HyperV",
+  "HyperV",*/
   "Java",
   "C++",
   "Python",
@@ -318,25 +317,25 @@ const competencesTech = [
   "JavaScript",
   "HTML",
   "CSS",
-  "Django",
-  "Négociations",
+  "Django"
+  /*"Négociations",
   "Gérance",
   "Ventes",
   "Excel",
   "Word",
   "Salesforce",
   "Clarity",
-  "SQL"
+  "SQL"*/
 ];
 
 //
 const competencesMeth = [
-  "Fabrication",
+  /*"Fabrication",
   "Cuisson",
   "Division",
   "Pétrissage",
   "Façonnage",
-  "Finition",
+  "Finition",*/
   "Sauvegarde",
   "Support",
   "Assistance",
@@ -351,8 +350,8 @@ const competencesMeth = [
   "Test unitaires",
   "Jenkins",
   "Scrum",
-  "Photoshop",
-  "Saas",
+  "Photoshop"
+  /*"Saas",
   "Mercurial",
   "Responsive",
   "Commercial B to B",
@@ -373,7 +372,7 @@ const competencesMeth = [
   "Tâches administratives",
   "Archivage",
   "Gestion des plannings",
-  "Facturation"
+  "Facturation"*/
 ];
 
 const competencesHumaine = [
