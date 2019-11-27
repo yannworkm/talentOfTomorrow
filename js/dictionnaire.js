@@ -241,6 +241,8 @@ var secrétaire = {
 
 var listPost = new Array(iT_Infra, iT_Dev1,iT_Dev2);
 
+var listPostDemo = new Array(iT_Infra, iT_Dev1,iT_Dev2);
+
 var resultGlobalMatching = [];
 
 function getMatchingPoste(compTech, comptMethodo, comptHumaine) {
