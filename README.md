@@ -1,11 +1,5 @@
-<!doctype html>
 <html>
-  <title>README</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="../static/style.css">
-  <link rel="canonical" href="https://www.npmjs.org/doc/README.html">
-  <script async=true src="../../static/toc.js"></script>
-
+  
   <body>
     <div id="wrapper">
 
