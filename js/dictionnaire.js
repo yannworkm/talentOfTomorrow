@@ -261,12 +261,6 @@ function getMatchingPoste(compTech, comptMethodo, comptHumaine) {
   return resultGlobalMatching;
 }
 
-function createDicoPosteWithResultGlobalMatching()
-{
-  console.log(resultGlobalMatching);
-}
-
-
 function getMatchingComp(listPost, listCandidat) {
   var matches = [];
   for (var i = 0; i < listPost.length; i++) {
