@@ -8,17 +8,17 @@
 <p></p>
 <p>L'objectif du site web est de :</br>
 * Améliorer le recrutement. </br>
-* Facilité la recherche de postes. </br>
+* Faciliter la recherche de postes. </br>
 * Vérifier son profil sur le marché.</br>
 
 
 En effet, ce site va faciliter le recrutement en permettant à un candidat à partir de son CV, d’obtenir des annonces correspondant à son profil avec un minimun de 60% de compatibilité (mots clefs). Le candidat peut aussi voir si son profil correspond au marché de l’emploi actuel. </br>
 Du côté RH, le recruteur va renseigner toutes les compétences souhaitées pour un poste. Il va aussi pouvoir scanner des CV et voir lesquels correspondent aux annonces.
 <h2 id="important">Pré-requis</h2>
-<p>Il est necessaire d'avoir acces a un navigateur internet.</br>Il faut etre en possession du livrable </p>
+<p>Il est nécessaire d'avoir accès à un navigateur internet.</br>Il faut être en possession du livrable </p>
 <h2 id="important">Lancement</h2>
-<p>Il faut cliqué sur index.html</p>
-<h2 id="important">Fonctionnalité</h2>
+<p>Il faut cliquer sur index.html</p>
+<h2 id="important">Fonctionnalités</h2>
 <table>
 Actions :
 </br>
@@ -53,9 +53,6 @@ RH :
 <td>La RH peut définir des annonces et des compétences</td>
 <tr>
 <td>B03</td>
-<td>Un utilisateur peut choisir une annonce</td>
-</tr>
-<td>B04</td>
 <td>La RH peut scanner des CV</td>
 </tr>
 </table>
