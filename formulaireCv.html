@@ -30,11 +30,12 @@
         $('#select2Competences').select2();
         $('#select2Competences1').select2();
         $('.js-example-basic-multiple').select2();
+        $('#secteurAc').select2();
 
         competencesTech.forEach(element => $('#select2Competences').append('<option value="'+ element+'">'+element+'</option>'));
         competencesMeth.forEach(element => $('#select2CompetencesMethodo').append('<option value="'+ element+'">' + element + '</option>'));
         competencesHumaine.forEach(element => $('#select2CompetencesHumaine').append('<option value="'+ element+'">' + element + '</option>'));
-
+        category.forEach(element => $('#secteurAc').append('<option value="'+ element+'">'+element+'</option>'));
     });
 
         function valideForm() {
@@ -76,10 +77,6 @@
                             <label for="exampleFormControlTextarea1">Description</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label>Compétences techniques</label><br>
-                            <select id="select2Competences" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;"></select>
-                        </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
@@ -98,11 +95,19 @@
                             <label for="exampleFormControlTextarea1">Centre d'intérêts</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputPost1">Compétences méthologiques</label><br>
-                            <select id="select2CompetencesMethodo" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;"></select>
-                        </div>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label>Catégorie</label><br>
+                    <select id="secteurAc" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;"></select>
+                </div>
+                <div class="form-group">
+                    <label>Compétences techniques</label><br>
+                    <select id="select2Competences" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;"></select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPost1">Compétences méthologiques</label><br>
+                    <select id="select2CompetencesMethodo" class="js-example-basic-multiple" multiple="multiple" style="width: 100%;"></select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPost1">Qualités humaines</label><br>

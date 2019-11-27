@@ -202,18 +202,7 @@
                             />
                           </div>
                           <div class="form-group">
-                            <select
-                              id="secteurAc"
-                              class="secteur"
-                              name="secteur"
-                              style="width: 100%;"
-                            >
-                              <option value="Agroalimentaire"
-                                >Agroalimentaire</option
-                              >
-                              <option value="Banque">Banque</option>
-                              <option value="Assurance">Assurance</option>
-                            </select>
+                            <select id="secteurAc" class="secteur" name="secteur" style="width: 100%;"></select>
                           </div>
                           <div class="form-group">
                             <input
@@ -355,5 +344,12 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/dictionnaire.js"></script>
+    <script rel="stylesheet">
+        $(document).ready(function () {
+          $('#secteurAc').select2();
+          category.forEach(element => $('#secteurAc').append('<option value="'+ element+'">'+element+'</option>'));
+        });
+    </script>
   </body>
 </html>
