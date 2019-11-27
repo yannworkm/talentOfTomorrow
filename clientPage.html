@@ -125,9 +125,16 @@
                       placeholder="Rechercher..."
                       aria-label="Search"
                       aria-describedby="basic-addon2"
+                      disabled
                     />
                     <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
+                      <button
+                        class="btn btn-primary"
+                        type="button"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Cette fonctionnalité n'est pas encore disponible"
+                      >
                         <i class="fas fa-search fa-sm"></i>
                       </button>
                     </div>
@@ -161,6 +168,9 @@
         <footer class="sticky-footer bg-white">
           <script>
             $(document).ready(function() {
+              $(function() {
+                $('[data-toggle="tooltip"]').tooltip();
+              });
               var profil = JSON.parse(localStorage.getItem("Resultat"));
 
               var listDemo = [];

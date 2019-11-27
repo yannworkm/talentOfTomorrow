@@ -198,6 +198,9 @@
         <footer class="sticky-footer bg-white">
           <script>
             $(document).ready(function() {
+              $(function() {
+                $('[data-toggle="tooltip"]').tooltip();
+              });
               listPostDemo.forEach(function(element) {
                 $("#posteContent").append(
                   '<div class="col-sm"> <div class="card text-white bg-dark" style="width: 18rem;"> <div> <div class="card-header bg-dark text-center"> <div class="row"> <div class="col"> Informatique </div><div class="col text-right"> <div data-badge="3" class="pmd-badge pmd-badge-overlap pmd-badge-danger" > <span class="badge-notification mt-5" data-badge="12" ><i class="fas fa-user-check"></i ></span> <span class="badge-notification mt-5 badge-one" data-badge="4" ><i class="fas fa-envelope"></i ></span> </div></div></div></div></div><div class="card-body"> <h5 class="card-title">' +
