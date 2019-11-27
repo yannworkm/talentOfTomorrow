@@ -65,7 +65,7 @@
         <!-- Sidebar - Brand -->
         <a
           class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="clientPage.html"
+          href="index.html"
         >
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-dragon"></i>
@@ -80,9 +80,9 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="candidature.html">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Autres postes</span></a
+            <span>Autre CV</span></a
           >
         </li>
 
@@ -172,16 +172,12 @@
                 $('[data-toggle="tooltip"]').tooltip();
               });
               var profil = JSON.parse(localStorage.getItem("Resultat"));
-
               var listDemo = [];
-
               console.log(profil);
-
               if (profil != "") {
                 profil.forEach(function(element) {
                   listDemo.push(element);
                 });
-
                 listDemo.forEach(function(element) {
                   $("#containerResult").append(
                     '<div class="col-sm"> <div class="card text-white bg-dark" style="width: 18rem;"> <div class="card-body"> <h5 class="card-title">' +
@@ -192,7 +188,6 @@
                       element.Description +
                       '</p><div class="row"> <div class="col"> <a href="#" class="btn btn-outline-secondary" role="button" data-toggle="modal" data-target="#exampleModalScrollable" >Postuler <i class="far fa-arrow-alt-circle-right"></i> </a> </div><div class="col"> <button data-toggle="tooltip" data-placement="top" title="Le taux de correspondance est de '+element.PourcentageMatching+'%" id="pastilleResult" class="btn btn-success btn-circle btn-lg disabled"  style="width: 30px; height: 35px; margin-left: 80px;" ></a> </div></div><div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true" > <div class="modal-dialog modal-dialog-scrollable" role="document" > <div class="modal-content"> <div class="modal-header text-black"> <h5 class="modal-title text-black" id="exampleModalScrollableTitle" style="color: black!important;" > Voulez-vous confirmer votre candidature ? </h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close" > <span aria-hidden="true">&times;</span> </button> </div><div class="modal-body"> <div class="container"> <div class="row" style="margin: 30px;"> <div class="col" style="text-align: center;"> <a href="#" data-dismiss="modal" class="btn btn-success btn-circle btn-lg" style="width: 100px; height: 100px;" > <i class="fas fa-check"></i> </a> </div><div class="col" style="text-align: center;"> <a href="#" data-dismiss="modal" class="btn btn-danger btn-circle btn-lg" style="width: 100px; height: 100px;" > <i class="fas fa-times"></i> </a> </div></div></div></div></div></div></div></div></div></div>'
                   );
-
                   if (parseInt(element.PourcentageMatching, 10) < 80) {
                     console.log("tets");
                     $("#pastilleResult").addClass(
