@@ -18,14 +18,43 @@
       rel="stylesheet"
       type="text/css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
       rel="stylesheet"
     />
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
   </head>
+
+  <script>
+    $(document).ready(function() {
+      $("#secteurAc").select2();
+      $(".secteur").select2();
+    });
+  </script>
 
   <body id="page-top">
     <!-- Page Wrapper -->
@@ -153,8 +182,10 @@
           </nav>
           <div class="container-fluid">
             <div class="card">
-              <h5 class="card-header text-center">
+              <h5 class="card-header text-center" style="letter-spacing: 4px;">
+                <i class="fas fa-file-contract"></i>
                 Ajout d'une fiche de poste
+                <i class="fas fa-file-contract"></i>
               </h5>
               <div class="card-body">
                 <div class="row">
@@ -171,11 +202,25 @@
                             />
                           </div>
                           <div class="form-group">
+                            <select
+                              id="secteurAc"
+                              class="secteur"
+                              name="secteur"
+                              style="width: 100%;"
+                            >
+                              <option value="Agroalimentaire"
+                                >Agroalimentaire</option
+                              >
+                              <option value="Banque">Banque</option>
+                              <option value="Assurance">Assurance</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
                             <input
                               type="text"
                               class="form-control"
                               id="formGroupExampleInput2"
-                              placeholder="Another input"
+                              placeholder="Compétences techniques recherchées "
                             />
                           </div>
                           <div class="form-group">
@@ -183,7 +228,7 @@
                               type="text"
                               class="form-control"
                               id="formGroupExampleInput2"
-                              placeholder="Another input"
+                              placeholder="Compétences méthodologique recherchées "
                             />
                           </div>
                           <div class="form-group">
@@ -191,7 +236,7 @@
                               type="text"
                               class="form-control"
                               id="formGroupExampleInput2"
-                              placeholder="Another input"
+                              placeholder="Valeur humaines"
                             />
                           </div>
                         </form>
@@ -201,21 +246,29 @@
                   <div class="col">
                     <div class="card">
                       <div class="card-body">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="First name"
-                        />
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1"
+                            >Description</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="exampleFormControlTextarea1"
+                            rows="6"
+                          ></textarea>
+                          <small class="form-text text-muted"
+                            >1500 caractères minimum pour décrire votre résumé.
+                            5000 max.</small
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="row" style="margin-top: 30px; text-align: center;">
-                  <div class="text-center">
-                    <button type="button" class="btn btn-outline-dark">
-                      Enregistrer la fiche de compétences
-                    </button>
-                  </div>
+                <div style="margin-top: 30px; text-align: center;">
+                  <button type="button" class="btn btn-outline-dark">
+                    Enregistrer la fiche de compétences
+                    <i class="fas fa-save"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -282,9 +335,13 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
