@@ -19,12 +19,11 @@ var boulanger = {
       "13": "Dater les produits",
       "14": "Assurer la réception des matières premières",
       "15": "Gérer l'état des stocks"
-
     },
     Methodologique: {
       "1": "Fabrication",
       "2": "Cuisson",
-      "3": "Division"
+      "3": "Division",
       "4": "Pétrissage",
       "5": "Façonnage",
       "6": "Finition"
@@ -77,10 +76,9 @@ var iT_Infra = {
       "5": "Developpement",
       "6": "Supervision",
       "7": "Maintenance",
-      "8" "Architecture",
-      "9": "Optimisation",
+      "8" : "Architecture",
+      "9" : "Optimisation",
       "10": "Automatisation"
-
     },
     Humaine: {
       "1": "Débrouillard",
@@ -220,7 +218,7 @@ var secrétaire = {
       "2": "Notification de dossier",
       "3": "Gestion des courriers",
       "4": "Gestion administrative",
-      "5": "Gestion clients"
+      "5": "Gestion clients",
       "6": "Accueil physique",
       "7": "Accueil téléphonique",
       "8": "Standard",
@@ -312,7 +310,7 @@ const competencesTech = [
   "DevOps",
   "DNS",
   "VmWare",
-  "HyperV"
+  "HyperV",
   "Java",
   "C++",
   "Python",
@@ -335,10 +333,10 @@ const competencesTech = [
 const competencesMeth = [
   "Fabrication",
   "Cuisson",
-  "Division"
+  "Division",
   "Pétrissage",
   "Façonnage",
-  "Finition"
+  "Finition",
   "Sauvegarde",
   "Support",
   "Assistance",
@@ -347,7 +345,7 @@ const competencesMeth = [
   "Maintenance",
   "Architecture",
   "Optimisation",
-  "Automatisation"
+  "Automatisation",
   "Agile",
   "Visual Studio",
   "Test unitaires",
@@ -356,18 +354,18 @@ const competencesMeth = [
   "Photoshop",
   "Saas",
   "Mercurial",
-  "Responsive"
+  "Responsive",
   "Commercial B to B",
   "Analyse",
   "Organisation",
   "Marketing",
   "Mise en place de partenariat",
-  "Stratégie"
+  "Stratégie",
   "Rédaction de dossier,",
   "Notification de dossier",
   "Gestion des courriers",
   "Gestion administrative",
-  "Gestion clients"
+  "Gestion clients",
   "Accueil physique",
   "Accueil téléphonique",
   "Standard",
