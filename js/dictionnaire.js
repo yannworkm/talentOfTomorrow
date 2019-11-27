@@ -249,7 +249,7 @@ function getMatchingPoste(compTech, comptMethodo, comptHumaine) {
     var matchingcompTech = getMatchingComp(Object.values(poste['Compétences']['Technique']),compTech);
     var matchingcompMethodo = getMatchingComp(Object.values(poste['Compétences']['Methodologique']),comptMethodo);
     var matchingcompHumaine = getMatchingComp(Object.values(poste['Compétences']['Humaine']),comptHumaine);
-    var globalmatching = Math.round(((matchingcompTech+matchingcompMethodo+matchingcompHumaine)/3)*100)/100;
+    var globalmatching = Math.round(((matchingcompTech*5+matchingcompMethodo*2+matchingcompHumaine)/8)*100)/100;
     if (globalmatching >= 50)
     {
       poste['PourcentageMatching']=globalmatching;
